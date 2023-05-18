@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>College Dashboard</title>
+</head>
+
+<body>
+  <!-- top navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+      </button>
+      <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+        aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <form class="d-flex ms-auto my-3 my-lg-0">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-primary" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- top navigation bar -->
+  <!-- offcanvas -->
+  <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
+    <div class="offcanvas-body p-0">
+      <nav class="navbar-dark">
+        <ul class="navbar-nav">
+          <li class="my-0">
+            <hr class="dropdown-divider bg-white" />
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3 active">
+              <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <hr class="dropdown-divider bg-white" />
+          </li>
+          <li>
+            <div class="text-white small fw-bold text-uppercase px-3 mb-3">
+              College Management
+            </div>
+          </li>
+          <li>
+            <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#students">
+              <span class="me-2 text-white"><i class="bi bi-people-fill"></i></span>
+              <span class="text-white">Students</span>
+              <span class="caret"></span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#professors">
+              <span class="me-2 text-white"><i class="bi bi-person-badge"></i></span>
+              <span class="text-white">Professors</span>
+            </a>
+          </li> 
+          <li>
+            <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#branches">
+              <span class="me-2 text-white"><i class="bi bi-book"></i></span>
+              <span class="text-white">Branches</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#students">
+              <span class="me-2 text-white"><i class="bi bi-info-circle"></i></span>
+              <span class="text-white">About us</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#students">
+              <span class="me-2 text-white"><i class="bi bi-telephone-fill"></i></span>
+              <span class="text-white">Contact us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- offcanvas -->
+  <main class="mt-5 pt-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Dashboard</h4>
+        </div>
+      </div>
+      <div class="container-fluid px-4">
+        <div class="row g-3 my-2">
+          <div class="col-md-4">
+            <div class="p-3 bg-primary text-white shadow-lg d-flex justify-content-around align-items-center rounded">
+              <div>
+                <h3 class="fs-2">1000</h3>
+                <p class="fs-5">Total Students</p>
+              </div>
+              <i class="bi bi-people-fill border rounded p-3" style="font-size: 1.8rem;"></i>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-3 bg-danger text-white shadow-lg d-flex justify-content-around align-items-center rounded">
+              <div>
+                <h3 class="fs-2">500</h3>
+                <p class="fs-5">Boys</p>
+              </div>
+              <i class="bi bi-gender-male border rounded p-3" style="font-size: 2rem;"></i>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-3 bg-success text-white shadow-lg d-flex justify-content-around align-items-center rounded">
+              <div>
+                <h3 class="fs-2">500</h3>
+                <p class="fs-5">Girls</p>
+              </div>
+              <i class="bi bi-gender-female border rounded p-3" style="font-size: 1.8rem;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid px-4">
+        <div class="row my-4 ">
+          <div class="col-md-12">
+            <h4>Student List</h4>
+          </div>
+        </div>
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#Roll No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Branch</th>
+              <th scope="col">Mobile No</th>
+              <th scope="col">Email</th>
+              <th scope="col">Admission Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left">20</td>
+              <td>Prajwal Zoting</td>
+              <td class="left">IT</td>
+              <td>9876543210</td>
+              <td>prajwal@gmail.com </td>
+              <td class="left">14 Mar 2002</td>
+            </tr>
+            <tr>
+              <td class="left">5</td>
+              <td>Pooja Patel</td>
+              <td class="left">ENTC</td>
+              <td>9876543210</td>
+              <td>pooja@gmail.com </td>
+              <td class="left">27 Aug 2005</td>
+            </tr>
+            <tr>
+              <td class="left">15</td>
+              <td>Sarah Smith</td>
+              <td class="left">CS</td>
+              <td>9876543210</td>
+              <td>sarah@gmail.com</td>
+              <td class="left">05 Jun 2011</td>
+            </tr>
+            <tr>
+              <td class="left">23</td>
+              <td>John Deo</td>
+              <td class="left">CS</td>
+              <td>9876543210</td>
+              <td>john@gmail.com</td>
+              <td class="left">15 Feb 2012</td>
+            </tr>
+            <tr>
+              <td class="left">10</td>
+              <td>Jay Soni</td>
+              <td class="left">IT</td>
+              <td>9876543210</td>
+              <td>kenh@gmail.com </td>
+              <td class="left">12 Nov 2012</td>
+            </tr>
+            <tr>
+              <td class="left">14</td>
+              <td>Jacob Ryan</td>
+              <td class="left">ENTC</td>
+              <td>9876543210</td>
+              <td>johnson@gmail.com</td>
+              <td class="left">03 Dec 2001</td>
+            </tr>
+            <tr>
+              <td class="left">18</td>
+              <td>Rajesh Bhatt</td>
+              <td class="left">IT</td>
+              <td>9876543210</td>
+              <td>rajesh@gmail.com</td>
+              <td class="left">22 Feb 2010</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav aria-label="...">
+          <ul class="pagination float-end">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </main>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.5.1.js"></script>
+</body>
+
+</html>
